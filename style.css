@@ -1,0 +1,192 @@
+#library {
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping to the next line */
+  justify-content: center; /* center the cards */
+  gap: 20px; /* space between cards */
+  padding: 20px;
+  max-width: 1800px; /* optional: keeps it nice and not stretched too wide */
+  margin: 0 auto; /* optional: centers the container itself */
+}
+
+* {
+  box-sizing: border-box; /* Ensures padding and border are part of the total width/height */
+}
+
+
+.book-card {
+  width: 300px;                    /* uniform size */
+  position: relative;
+  overflow: hidden;                   /* keeps corners neat */
+  border-radius: 12px;
+  background-size: cover;             /* cover entire area */
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow:
+    0 4px 8px rgba(0,0,0,0.1),        /* outer shadow */
+    inset 0 -100px 100px rgba(0,0,0,0.6); /* dark bottom fade */
+  transition: transform 0.2s, box-shadow 0.3s;
+  display: flex;
+  align-items: flex-end;              /* push overlay to bottom */
+  margin: 20px;
+}
+
+.book-title {
+  font-weight: bold;
+  min-height: 40px; /* Adjust based on your font-size */
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-author {
+  font-style: italic;
+  margin-bottom: auto;
+}
+
+.book-card button {
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.book-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 8px 16px rgba(0,0,0,0.2),
+    inset 0 -100px 100px rgba(0,0,0,0.6);
+}
+
+.book-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: rgba(0,0,0,0.5);  /* dark semi-transparent box */
+  color: white;                 /* all text inside is white */
+  line-height: 1.4;
+}
+
+.book-details h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.book-details p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+}
+
+.book-details button {
+  margin-top: 10px;
+  width: 48%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+
+.book-details .remove-btn {
+  background: #e74c3c;
+}
+
+.book-details .remove-btn:hover {
+  background: #c0392b;
+  transform: scale(1.03);
+}
+
+.book-details .toggle-read-btn {
+  background: #007bff;
+}
+
+.book-details .toggle-read-btn:hover {
+  background: #0056b3;
+  transform: scale(1.03);
+}
+
+.book-details button:hover {
+  transform: scale(1.03);
+}
+
+.book-image {
+  width: 100%;
+  height: 350px;
+}
+
+.book-card button {
+  margin: 5px 0;
+  width: 100%;
+}
+
+.book-card {
+  background: linear-gradient(white, #f8f9fa);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #1f2937; /* Dark Slate Gray - A cooler background */
+  color: #f5f7fa;  /* Light text color to contrast nicely */
+  margin: 10px;
+  padding: 10px;
+}
+
+.book-card {
+  background: white;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+button {
+  background-color: #00bcd4; /* Cool Teal */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #0097a7; /* Slightly darker teal on hover */
+  transform: scale(1.05);
+}
+
+
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+#header {
+  display: flex;
+  flex-direction: column; /* stack them vertically */
+  align-items: center;     /* center horizontally */
+  margin-top: 20px;        /* spacing from top */
+  gap: 10px;               /* space between h1 and button */
+  margin-bottom: 20px;
+}
+
